@@ -2,7 +2,7 @@ import socket
 
 puerto = 8080
 ip = "10.0.2.15"
-def chat(cliente):
+def calculadora(cliente):
     condicion = True
 
     while condicion:
@@ -32,7 +32,7 @@ def chat(cliente):
 cliente = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 try:
     cliente.connect((ip, puerto))
-    chat(cliente)
+    calculadora(cliente)
 except KeyboardInterrupt:
     cliente.close()
 print("Usted salió")
